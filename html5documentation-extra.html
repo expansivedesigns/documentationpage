@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#hamburger").click(function(){
+    $("#nav-bar").toggle();
+  });
+});
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTML5 Technical Documentation</title>
+<style>
+html {
+	  scroll-behavior: smooth;
+	}
+	
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	}
+	
+a:link {
+	color: #333;
+	}
+
+a:hover {
+	color: #666;	
+	}
+
+a:visited {
+	color: #666;		
+	}
+	
+a:active {
+	color: #666;	
+	}
+
+#nav-bar {
+	position: fixed;
+	float: left;
+	width: 25%;
+  	z-index: 1; /* Stay on top */
+  	overflow-x: hidden; /* Disable horizontal scroll */
+	}
+	
+xmp {
+	background-color: #E9E9E9; 
+	overflow: auto;
+	}
+	
+#main-doc {
+	position: relative;
+	float: right;
+	padding: 0 2%;
+	width: 70%;
+	}
+
+#hamburger {
+	width: 50px;
+	height: auto;
+	display: none;
+	}
+	
+a#nav-link {
+	display: block;
+	padding: 20px 10px;
+	text-decoration: none;
+	border: thin solid #999;
+	border-right: none;
+	border-left: none;
+	background-color: #E9E9E9;
+	}
+
+@media only screen and (max-width: 768px) {
+	#hamburger {
+		display: block;
+		float:left;
+		position:fixed;
+		z-index: 1; /* Stay on top */	
+		}
+		
+	h1 {
+		text-align: center;
+		}	
+		
+	#nav-bar {
+		display: none;
+		width:50%;
+		top: 75px;
+		}
+		
+	#main-doc {
+		width: 95%;
+		}		
+	}
+	
+</style>
+
+
+</head>
+
+<header id="header">
+<img id="hamburger" src="http://expansivedesigns.com/projects/codecamp/documentationpage/images/hamburger_black.png">
+
+<h2>HTML5 Documentation</h2>
+<nav id="nav-bar">
+<a id="nav-link" href="#Introduction">Introduction:  What is HTML5?</a>
+<a id="nav-link" href="#HTML5">Differences between HTML and HTML5</a>
+<a id="nav-link" href="#Semantics">New semantics for accessibility</a>
+<a id="nav-link" href="#Elements">New elements and atrributes</a>
+<a id="nav-link" href="#APIs">HTML APIs with CSS and JavaScript</a>
+</nav>
+</header>
+
+<body>
+<main id="main-doc">
+
+    <section id="Introduction" class="main-section">
+    <h2>Introduction:  What is HTML5?</h2>
+    
+	    <p>HTML5 is the most recent version of Hypertext Markup Language used to display a web page.  Combined with CSS HTML5 is very powerful because includes enhanced functionality to display animation, graphics, movies and videos without the use of a scripting language like JavaScript.  Here are some of it's features:</p>
+        
+<p>Also, HTML uses a simplier code stucture, as show below.</p>
+
+  <xmp>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Page Title</title>
+    </head>
+    <body>
+    
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    
+    </body>
+    </html>
+  </xmp>
+
+    </section>
+    
+    
+    <section id="HTML5" class="main-section">
+    <h2>Differences between HTML and HTML5</h2>
+    
+    <p>Besides using a simplier display structure, here are the key difference between HTML and HTML5, as described <a href="https://www.w3schools.com/html/html5_intro.asp">W3Schools</a>.</p>
+
+        <ul>
+        	<li>New semantic elements like: <xmp><header>, <footer>, <article>, and <section></xmp></li>
+        	<li>New attributes of form elements like number, date, time, calendar, and range</li>
+        	<li>New form elements: <xmp><datalist> and <output></xmp></li>
+        	<li>New graphic elements: <xmp><svg> and <canvas></xmp></li>
+        	<li>New multimedia elements: <xmp><audio> and <video></xmp></li>
+        </ul>
+    
+	    <p>This documentation will attempt to demonstrate some of the key differences and uses of HTML5.</p>
+        
+
+    </section>
+    
+    <section id="Semantics" class="main-section">
+    <h2>New semantics for accessibility</h2>
+    
+	    <p>Semantics is the study of the meanings of words and phrases in a language.  Semantic elements = elements with a meaning.</p>
+	    <p>A semantic element clearly describes its meaning to both the browser, developer, and visitors with visual impairments.  So in HTML5 many non-semantic elements have been replaced by semantic elements.  <xmp><div> and <span></xmp> Changes to: <xmp><form>, <table>, and <article></xmp></p>
+
+    </section>    
+    
+    <section id="Elements" class="main-section">
+    <h2>New elements and atrributes</h2>
+    
+    <p>HTML5 offers new elements for better document structure.</p>
+    
+    <h3>Tag	Description</h3>
+	<xmp>
+    <article>	Defines an article in a document
+    <aside>	Defines content aside from the page content
+    <bdi>	Isolates a part of text that might be formatted in a different direction from other text outside it
+    <details>	Defines additional details that the user can view or hide
+    <dialog>	Defines a dialog box or window
+    <figcaption>Defines a caption for a <figure> element
+    <figure>	Defines self-contained content
+    <footer>	Defines a footer for a document or section
+    <header>	Defines a header for a document or section
+    <main>	Defines the main content of a document
+    <mark>	Defines marked/highlighted text
+    <meter>	Defines a scalar measurement within a known range (a gauge)
+    <nav>	Defines navigation links
+    <progress>	Represents the progress of a task
+    <rp>	Defines what to show in browsers that do not support ruby annotations
+    <rt>	Defines an explanation/pronunciation of characters (for East Asian typography)
+    <ruby>	Defines a ruby annotation (for East Asian typography)
+    <section>	Defines a section in a document
+    <summary>	Defines a visible heading for a <details> element
+    <time>	Defines a date/time
+    <wbr>	Defines a possible line-break
+	</xmp>
+    
+    
+	<p>Many new form elements allow users to alter a page dynamically.</p>
+    
+   	<xmp> 
+    <datalist>	Specifies a list of pre-defined options for input controls
+    <output>	Defines the result of a calculation
+	</xmp>
+
+	   
+    </section>
+    
+    
+    <section id="APIs" class="main-section">
+    <h2>HTML APIs (Application Programming Interfaces) with CSS and JavaScript</h2>
+
+	    <p>Some of the new API features that HTML offers include:</p>  
+        <ul>
+            <li>HTML Drag and Drop</li>
+            <li>HTML Local Storage</li>
+            <li>HTML Application Cache</li>
+            <li>HTML Web Workers</li>
+            <li>HTML SSE</li>           
+        </ul>   
+       
+    
+ <p>Drag and drop is my favorite new feature and is very popular with many web developers.  It is when you "grab" an object and drag it to a different location.  In HTML5, drag and drop is part of the standard: Any element can be draggable.  Below is an example of the Drag and Drop feature:</p>
+        
+        
+    <xmp>
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+    </head>
+    <body>
+    
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+    <img id="drag1" src="../landingpage/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    
+    </body>
+    </html>
+    </xmp>
+
+    </section>
+
+</main>
+
+<footer>
+</footer>
+</body>
+</html>
